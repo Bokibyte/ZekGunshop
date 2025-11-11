@@ -1,0 +1,142 @@
+/* ===================== THEME TOKENS ===================== */
+/* Ganti class <html> antara .theme-dark / .theme-light untuk switch tema */
+:root{
+  --bg: #0b0f14;
+  --panel: #10151c;
+  --text: #e7eaee;
+  --muted: #a7b0ba;
+  --border: #1b2430;
+  --accent: #4c82ff;
+}
+.theme-light{
+  --bg: #ffffff;
+  --panel: #f3f5f7;
+  --text: #0b0f14;
+  --muted: #4f5b66;
+  --border: #e2e6ea;
+  --accent: #1b66ff;
+}
+/* ===================== GLOBAL ===================== */
+*{ box-sizing:border-box }
+html,body{ height:100% }
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height:1.5;
+}
+
+/* ===================== HEADER (8 kolom, align tengah) ===================== */
+.site-header{
+  position:sticky; top:0; z-index:50;
+  background:rgba(16,21,28,.92);
+  backdrop-filter: blur(8px);
+  border-bottom:1px solid var(--border);
+}
+.theme-light .site-header{ background:rgba(255,255,255,.9) }
+
+.header-grid{
+  max-width:1200px; margin:auto;
+  display:grid;
+  grid-template-columns: repeat(8, 1fr); /* === 8 kolom sesuai brief === */
+  gap: 0;
+  align-items:center; /* vertical center */
+  min-height:64px;
+  padding:0 16px;
+}
+.cell{
+  display:flex; align-items:center; justify-content:center;
+}
+.cell-1{ justify-content:flex-start }     /* Logo kiri */
+.cell-2{ }                                /* Kosong */
+.logo{ height:28px; object-fit:contain }
+.nav-link{
+  color:var(--muted); text-decoration:none; font-weight:600;
+}
+.nav-link:hover{ color:var(--text) }
+.icon-btn{ color:var(--muted); cursor:pointer }
+.icon-btn:hover{ color:var(--text) }
+.icon{ width:22px; height:22px }
+
+/* ===================== HERO (DIV 1 - 3 LAYER) ===================== */
+.hero{
+  position:relative; isolation:isolate;
+  min-height:72vh;
+  display:flex; align-items:center;
+  /* ===== LAYER 1: BACKGROUND GAMBAR ===== */
+  background:url('assets/img/hero.jpg') center/cover no-repeat; /* GANTI file sesuai aset */
+}
+/* ===== LAYER 2: OVERLAY GRADIENT HITAM (opacity bisa diubah) ===== */
+.hero::before{
+  content:""; position:absolute; inset:0; z-index:0;
+  /* NOTE: gunakan --overlay-alpha untuk atur tingkat gelap; 1 = 100% */
+  --overlay-alpha: 1; /* === OPACITY OVERLAY (100% by default) === */
+  background: linear-gradient(90deg,
+    rgba(0,0,0,var(--overlay-alpha)) 0%,
+    rgba(0,0,0,var(--overlay-alpha)) 60%,
+    rgba(0,0,0,calc(var(--overlay-alpha) * 0.7)) 100%);
+}
+/* ===== LAYER 3: TEKS KIRI ===== */
+.hero-content{
+  position:relative; z-index:1;
+  max-width:1200px; margin:auto; width:100%;
+  padding:64px 16px;
+}
+.title-xl{
+  font-size: clamp(40px, 7vw, 72px);
+  font-weight: 900; line-height:1.05; margin:0 0 16px 0;
+  letter-spacing:.4px;
+}
+.subtitle{
+  color:var(--muted); margin:0 0 24px 0; max-width:640px;
+}
+.btn-primary{
+  display:inline-block; padding:12px 20px; border-radius:10px;
+  background:var(--accent); color:#fff; text-decoration:none; font-weight:700;
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+}
+.btn-primary:hover{ filter:brightness(.95) }
+
+/* ===================== SECTIONS 2–5 (2 kolom, 1 baris) ===================== */
+.two-col{
+  max-width:1200px; margin:40px auto; padding:0 16px;
+  display:grid; grid-template-columns: 1fr 1fr; gap:20px;
+}
+@media (max-width: 768px){
+  .two-col{ grid-template-columns:1fr }
+}
+.col{ display:flex; flex-direction:column; gap:8px }
+.card{
+  background:var(--panel); border:1px solid var(--border);
+  border-radius:16px; padding:24px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.card:hover{ transform:translateY(-4px); box-shadow:0 10px 24px rgba(0,0,0,.25) }
+.card-title{ margin:0 0 8px 0; font-weight:800 }
+.card-text{ margin:0; color:var(--muted) }
+
+/* ===================== DIV 6 (teks besar, align tengah) ===================== */
+.center-text{
+  max-width:960px; margin:64px auto; padding:0 16px; text-align:center;
+}
+.title-lg{
+  font-size: clamp(28px, 4.5vw, 44px);
+  font-weight:900; margin:0 0 8px 0;
+}
+.center{ margin:0 auto; color:var(--muted); max-width:720px }
+
+/* ===================== DIV 7 Placeholder ===================== */
+.placeholder{
+  min-height:200px; border-top:1px dashed var(--border);
+  border-bottom:1px dashed var(--border);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--muted);
+}
+
+/* ===================== FOOTER ===================== */
+.site-footer{
+  display:flex; align-items:center; justify-content:center;
+  text-align:center; padding:24px 16px; border-top:1px solid var(--border);
+  color:var(--muted);
+}
