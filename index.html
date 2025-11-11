@@ -25,65 +25,93 @@
 </head>
 
 <body>
-    <div class="container-fluid bg-black py-2 align-content-center" style="height: 200px;">
+
+    <!-- Div1: Header  -->
+    <div class="container-fluid bg-black align-content-center g"
+         style="height: 250px;">
         <div class="row align-items-center text-center">
+
             <!-- Kolom 1: Logo -->
-            <div class="col-sm-2 ">
-                <img src="assets/image/zekgunshop.svg" alt="Logo" style="height: 105px;">
+            <div class="col-sm-2 text-center">
+                <img src="assets/image/zekgunshop.svg"
+                     alt="Logo"
+                     class="img-fluid">
             </div>
 
             <!-- Kolom 2: NESTED ROW (3 kolom di dalamnya) -->
             <div class="col-sm-8">
                 <div class="row justify-content-center">
-                    <div class="col-2 col-md-2">
-                        <a href="#" class="nav-text d-block fs-2">Home</a>
+                    <div class="col-2 container-fluid col-md-2"></div>
+                    <div class="col-2 container-fluid col-md-2">
+                        <a href="#" 
+                           class="nav-text d-block fs-1">Home</a>
                     </div>
-                    <div class="col-2 col-md-2">
-                        <a href="#" class="nav-text d-block fs-2">Product</a>
+                    <div class="col-2 container-fluid col-md-2">
+                        <a href="#" 
+                           class="nav-text d-block fs-1">Product</a>
                     </div>
-                    <div class="col-2 col-md-2">
-                        <a href="#" class="nav-text d-block fs-2">About</a>
+                    <div class="col-2 container-fluid col-md-2">
+                        <a href="#" 
+                           class="nav-text d-block fs-1">About</a>
                     </div>
                 </div>
             </div>
+
             <div class="col-sm-2">
                 <div class="row">
                     <div class="col-6">
-                        <a href="#"><img src="assets/image/cart_empty_white.svg" alt="Search" style="height: 30px;"></a>
+                        <a href="#"><img src="assets/image/cart_empty_white.svg"
+                           alt="Search"
+                           style="height: 30px;"></a>
                     </div>
                     <div class="col-6">
-                        <a href="#"><img src="assets/image/cart_empty_white.svg" alt="Cart" style="height: 30px;"></a>
+                        <a href="#"><img src="assets/image/cart_empty_white.svg"
+                           alt="Cart"
+                           style="height: 30px;"></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Div2  -->
-    <div class="container-fluid position-relative bg-black justify-content-center align-content-center" style="height: 1500px;">
+    <!-- Div2 BigBanner -->
+    <div class="container-fluid position-relative bg-black justify-content-center align-content-center"
+         style="height: 1500px;">
         <div class="row justify-content-center align-content-center">
-            <div class="col-6"></div>
-            <div class="col-6 overflow-hidden position-relative" style="width: auto; height: 1500px;">
-                <div class="soldier" style="height: 2100px;">
-                    <img src="assets/image/soldier1.png" alt="Soldier" class="h-100 w-auto d-block mx-auto" style="object-fit: cover;">
+            <div class="col-5"></div>
+            <div class="col-6 overflow-hidden position-relative"
+                 style="width: auto; height: 1500px;">
+                <div class="soldier"
+                     style="height: 2500px;">
+                    <img src="assets/image/soldier1.png"
+                         alt="Soldier" 
+                         class="h-100 w-auto d-block mx-auto" 
+                         style="object-fit: cover;">
                 </div>
                 <div class="position-absolute bottom-0">
-                    <img src="assets/image/soldierclip.svg" style="height: 600px;" alt="Soldier Clip">
+                    <img src="assets/image/soldierclip.svg" 
+                         style="height: 600px;" 
+                         alt="Soldier Clip">
                 </div>
             </div>
 
             <!-- bg  -->
-            <div class="position-absolute top-0 start-0 w-100 h-100"  style="background: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.3));"></div>
+            <div class="position-absolute top-0 start-0 w-100 h-100"
+                 style="background: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.3));"></div>
             
             <!-- txt, btn -->
-            <div class="container position-absolute align-content-center" style="height: 1000px;">
+            <div class="container position-absolute align-content-center" 
+                 style="height: 1000px;">
                 <div class="row ">
-                    <div class="col-4"></div>
+                    <div class="col-2"></div>
                     <div class="col-4">
-                        <h1 class="text-white fw-bold text-start" style="font-size: 100px;">MODERN TACTICAL ARMS</h1>
+                        <h1 class="text-white fw-bold text-start"
+                        style="font-size: 100px;">MODERN TACTICAL ARMS</h1>
                         <p class="text-white fs-2 text-start">Discover cutting-edge tactical firearms designed for precision, reliability, and performance in every mission.</p>
                         <p class="text-white fs-1 text-start fw-bold"><mark>IN FIREPOWER WE TRUST.</mark></p>
-                        <button type="button" class="btn btn-outline-warning mt-5" style="font-size: 25px; padding: 20px;">Check Weapon Case</button>
+                        <button type="button" 
+                                class="btn btn-outline-warning mt-5" 
+                                style="font-size: 25px; padding: 20px;">Check Weapon Case</button>
                     </div>
                     <div class="col-4"></div>
                 </div>
@@ -91,31 +119,155 @@
         </div> 
     </div>
 
-    <!-- DIV3 -->
-    <div class="desc container-fluid bg-black">
-        <div class="desc-1">
-            <div class="row" >
-                <div class="col-6 bg-dark" style="height: 600px;">
-                
-                </div>
-                <div class="col-6 bg-dark-subtle" style="height: 600px;">
-                
-                </div>
+    <!-- Div 3 - Desc 1 -->
+    <div class="container-fluid position-relative bg-black justify-content-center align-content-center">
+        <!-- shade -->
+        <div class="position-absolute top-0 start-0 w-100 h-100"
+             style="background: linear-gradient(to right, #ffc10750, #ffc10700); z-index: 1;">
+        </div>
+
+        <!-- txt -->
+        <div class="row position-absolute top-0 start-0 w-100 h-100 align-items-center text-white text-end"
+             style="z-index: 2;">
+            <div class="col-6">
+                <h1 class="fw-bold display-1">MAX FIREPOWER</h1>
+                <p class="fs-2">Explore our extensive collection of high-performance firearms, engineered to deliver unparalleled firepower and precision for every tactical need.</p>
             </div>
         </div>
 
-        <div class="desc-2">
-            <div class="row">
-                <div class="col-6 bg-dark-subtle" style="height: 600px;">
+        <!-- desc image-->
+        <div class="row position-relative" >
+            <div class="col-6 bg-black"
+                 style="height: 600px;"></div>
+            <div class="col-6 bg-dark overflow-hidden position-relative"
+                 style="height: 700px;">
                 
+                <!-- shade -->
+                <div class="position-absolute top-0 start-0 w-100 h-100" 
+                     style="background: linear-gradient(to right, #000000FF, #00000050);">
                 </div>
-                <div class="col-6 bg-dark" style="height: 600px;">
-                
-                </div>
+                <img src="assets/image/banner1.jpg"
+                     alt="Render1"
+                     class=" float-end w-100 h-100"
+                     style="object-fit: cover;">
             </div>
         </div>
-        
     </div>
+
+    <div class="bg-black" style="height: 100px;"></div>
+
+    <!-- Div 4 - Desc 2 -->
+    <div class="container-fluid position-relative bg-black justify-content-center align-content-center">
+        <!-- shade -->
+        <div class="position-absolute top-0 start-0 w-100 h-100"
+             style="background: linear-gradient(to left, #ffc10750, #ffc10700); z-index: 1;">
+        </div>
+
+        <!-- txt -->
+        <div class="row position-absolute top-0 start-0 w-100 h-100 align-items-center text-white text-start"
+             style="z-index: 2;">
+            <div class="col-6"></div>
+            <div class="col-6">
+                <h1 class="fw-bold display-1">MAX AMMO</h1>
+                <p class="fs-2">Discover our premium selection of ammunition, meticulously crafted to ensure optimal performance, reliability, and accuracy for all your shooting needs.</p>    
+            </div>
+        </div>
+
+        <!-- desc image-->
+        <div class="row position-relative" >
+            <div class="col-6 bg-black overflow-hidden position-relative"
+                 style="height: 700px;">
+                 <!-- shade -->
+                <div class="position-absolute top-0 start-0 w-100 h-100" 
+                     style="background: linear-gradient(to left, #000000FF, #00000050);">
+                </div>
+                <!-- image -->
+                <img src="assets/image/banner2.jpg"
+                     class=" float-end w-100 h-100"
+                     style="object-fit: cover;">
+            </div>
+            <div class="col-6 bg-black"
+                 style="height: 600px;">
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-black" style="height: 100px;"></div>
+
+    <!-- Div 5 - Desc 3 -->
+    <div class="container-fluid position-relative bg-black justify-content-center align-content-center">
+        <!-- shade -->
+        <div class="position-absolute top-0 start-0 w-100 h-100"
+             style="background: linear-gradient(to right, #ffc10750, #ffc10700); z-index: 1;">
+        </div>
+
+        <!-- txt -->
+        <div class="row position-absolute top-0 start-0 w-100 h-100 align-items-center text-white text-end"
+             style="z-index: 2;">
+            <div class="col-6">
+                <h1 class="fw-bold display-1">MAX RELIABILITY</h1>
+                <p class="fs-2">Precision-engineered and rigorously tested, our firearms are manufactured with high-precision processes to deliver consistent performance and uncompromising reliability in the toughest conditions.</p>
+            </div>
+        </div>
+
+        <!-- desc image-->
+        <div class="row position-relative" >
+            <div class="col-6 bg-black"
+                 style="height: 600px;"></div>
+            <div class="col-6 bg-dark overflow-hidden position-relative"
+                 style="height: 700px;">
+                
+                <!-- shade -->
+                <div class="position-absolute top-0 start-0 w-100 h-100" 
+                     style="background: linear-gradient(to right, #000000FF, #00000050);">
+                </div>
+                <img src="assets/image/banner3.jpg"
+                     alt="Render1"
+                     class=" float-end w-100 h-100"
+                     style="object-fit: cover;">
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-black" style="height: 100px;"></div>
+
+    <!-- Div 6 - Desc 4 -->
+    <div class="container-fluid position-relative bg-black justify-content-center align-content-center">
+        <!-- shade -->
+        <div class="position-absolute top-0 start-0 w-100 h-100"
+             style="background: linear-gradient(to left, #ffc10750, #ffc10700); z-index: 1;">
+        </div>
+
+        <!-- txt -->
+        <div class="row position-absolute top-0 start-0 w-100 h-100 align-items-center text-white text-start"
+             style="z-index: 2;">
+            <div class="col-6"></div>
+            <div class="col-6">
+                <h1 class="fw-bold display-1">BALANCE COST</h1>
+                <p class="fs-2">Quality and affordability in balance dependable tactical gear and firearms that deliver trusted performance without overspending.</p>
+            </div>
+        </div>
+
+        <!-- desc image-->
+        <div class="row position-relative" >
+            <div class="col-6 bg-black overflow-hidden position-relative"
+                 style="height: 700px;">
+                 <!-- shade -->
+                <div class="position-absolute top-0 start-0 w-100 h-100" 
+                     style="background: linear-gradient(to left, #000000FF, #00000050);">
+                </div>
+                <!-- image -->
+                <img src="assets/image/banner4.jpg"
+                     class=" float-end w-100 h-100"
+                     style="object-fit: cover;">
+            </div>
+            <div class="col-6 bg-black"
+                 style="height: 600px;">
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-black" style="height: 100px;"></div>
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
