@@ -5,92 +5,129 @@
     <title>ZEK Gunshop</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Orbitron', sans-serif;
-        }
-
-        /* biar teks menu rapi dan enak dilihat */
-        .nav-text {
-            color: white;
-            text-decoration: none;
-            font-weight: 700;
-            transition: color 0.3s;
-        }
-
-        .nav-text:hover {
-            color: #fbb300; /* kuning accent */
-        }
-    </style>
+    <link href="costum.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
-
 <body>
+    <!-- Div1: Responsive Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-2">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="assets/image/zekgunshop.svg" alt="ZEK Gunshop Logo" class="img-fluid" style="max-height:64px;">
+            </a>
 
-    <!-- Div1: Header  -->
-    <div class="container-fluid bg-black align-content-center g"
-         style="height: 250px;">
-        <div class="row align-items-center text-center">
+            <div class="navbar-collapse justify-content-center" id="mainNav">
+                <ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center"></ul>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="#">HOME</a>
+                    </li>
 
-            <!-- Kolom 1: Logo -->
-            <div class="col-sm-2 text-center">
-                <img src="assets/image/zekgunshop.svg"
-                     alt="Logo"
-                     class="img-fluid">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white px-3" href="#" id="weaponDropdown" role="button"
+                             data-bs-toggle="dropdown" aria-expanded="false">WEAPON</a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="weaponDropdown"
+                                style="max-height:60vh; overflow:auto; background: linear-gradient(to bottom, #000000, #00000070);">
+                            <li><a class="dropdown-item text-white" href="#">Pistols</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Revolvers</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Shotguns</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Assault Rifles</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Sniper Rifles</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Submachine Guns (SMGs)</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Carbines</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Bolt-Action Rifles</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Semi-Automatic Rifles</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Light Machine Guns</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white px-3" href="#" id="ammoDropdown" role="button"
+                             data-bs-toggle="dropdown" aria-expanded="false">AMMUNITION</a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="ammoDropdown"
+                                style="max-height:60vh; overflow:auto; background: linear-gradient(to bottom,rgba(0,0,0,1), rgba(0,0,0,0.8));">
+                            <!-- Handgun & Rimfire -->
+                            <li><a class="dropdown-item text-white" href="#">9×19mm Parabellum (9mm Luger)</a></li>
+                            <li><a class="dropdown-item text-white" href="#">.45 ACP</a></li>
+                            <li><a class="dropdown-item text-white" href="#">.380 ACP (9×17)</a></li>
+                            <li><a class="dropdown-item text-white" href="#">.357 SIG</a></li>
+                            <li><a class="dropdown-item text-white" href="#">.22 Long Rifle (Rimfire)</a></li>
+
+                            <!-- Revolver calibers -->
+                            <li><a class="dropdown-item text-white" href="#">.38 Special</a></li>
+                            <li><a class="dropdown-item text-white" href="#">.357 Magnum</a></li>
+                            <li><a class="dropdown-item text-white" href="#">.44 Magnum</a></li>
+
+                            <!-- Rifle & Intermediate -->
+                            <li><a class="dropdown-item text-white" href="#">5.56×45mm NATO</a></li>
+                            <li><a class="dropdown-item text-white" href="#">7.62×51mm NATO (.308 Win)</a></li>
+                            <li><a class="dropdown-item text-white" href="#">7.62×39mm</a></li>
+                            <li><a class="dropdown-item text-white" href="#">.30-06 Springfield</a></li>
+                            <li><a class="dropdown-item text-white" href="#">.300 Winchester Magnum</a></li>
+                            <li><a class="dropdown-item text-white" href="#">.338 Lapua Magnum</a></li>
+                            <li><a class="dropdown-item text-white" href="#">.50 BMG (12.7×99mm)</a></li>
+                            <li><a class="dropdown-item text-white" href="#">5.45×39mm</a></li>
+                            <li><a class="dropdown-item text-white" href="#">6.5 Creedmoor</a></li>
+                            <li><a class="dropdown-item text-white" href="#">6.5×55mm Swedish</a></li>
+
+                            <!-- Shotgun -->
+                            <li><a class="dropdown-item text-white" href="#">12 Gauge</a></li>
+                            <li><a class="dropdown-item text-white" href="#">20 Gauge</a></li>
+                            <li><a class="dropdown-item text-white" href="#">.410 Bore</a></li>
+
+                            <!-- Historic / Regional -->
+                            <li><a class="dropdown-item text-white" href="#">7.62×25mm Tokarev</a></li>
+                            <li><a class="dropdown-item text-white" href="#">9×18mm Makarov</a></li>
+                            <li><a class="dropdown-item text-white" href="#">7.65×17mm (.32 ACP)</a></li>
+
+                            <!-- Specialty / Projectile types -->
+                            <li><a class="dropdown-item text-white" href="#">Full Metal Jacket (FMJ)</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Hollow Point (HP)</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Soft Point (SP)</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Armor-Piercing (AP)</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Tracer</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Frangible</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Sabot / APDS</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="#">ACCESSORIES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white px-3" href="#">CONTACT</a>
+                    </li>
+                </ul>
             </div>
 
-            <!-- Kolom 2: NESTED ROW (3 kolom di dalamnya) -->
-            <div class="col-sm-8">
-                <div class="row justify-content-center">
-                    <div class="col-2 container-fluid col-md-2"></div>
-                    <div class="col-2 container-fluid col-md-2">
-                        <a href="#" 
-                           class="nav-text d-block fs-1">Home</a>
-                    </div>
-                    <div class="col-2 container-fluid col-md-2">
-                        <a href="#" 
-                           class="nav-text d-block fs-1">Product</a>
-                    </div>
-                    <div class="col-2 container-fluid col-md-2">
-                        <a href="#" 
-                           class="nav-text d-block fs-1">About</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-2">
-                <div class="row">
-                    <div class="col-6">
-                        <a href="#"><img src="assets/image/cart_empty_white.svg"
-                           alt="Search"
-                           style="height: 30px;"></a>
-                    </div>
-                    <div class="col-6">
-                        <a href="#"><img src="assets/image/cart_empty_white.svg"
-                           alt="Cart"
-                           style="height: 30px;"></a>
-                    </div>
-                </div>
+            <!-- Right side icons (cart + account) - kept outside collapse so visible on phone -->
+            <div class="d-flex align-items-center ms-lg-3"></div>
+                <a href="#" class="me-3 d-flex align-items-center">
+                    <img src="assets/image/cart_empty_white.svg" alt="Shopping Cart" style="height:32px;" class="img-fluid">
+                </a>
+                <a href="#" class="d-flex align-items-center">
+                    <img src="assets/image/list.svg" alt="User Account" style="height:32px;" class="img-fluid">
+                </a>
             </div>
         </div>
-    </div>
+    </nav>
 
     <!-- Div2 BigBanner -->
     <div class="container-fluid position-relative bg-black justify-content-center align-content-center"
-         style="height: 1500px;">
+         style="height: 1000px;">
         <div class="row justify-content-center align-content-center">
             <div class="col-5"></div>
             <div class="col-6 overflow-hidden position-relative"
-                 style="width: auto; height: 1500px;">
-                <div class="soldier"
-                     style="height: 2500px;">
+                 style="width: auto; height: 1000px;">
+                <div class="soldier mt-5"
+                     style="height: 1300px;">
                     <img src="assets/image/soldier1.png"
                          alt="Soldier" 
-                         class="h-100 w-auto d-block mx-auto" 
+                         class="h-100" 
                          style="object-fit: cover;">
                 </div>
                 <div class="position-absolute bottom-0">
                     <img src="assets/image/soldierclip.svg" 
-                         style="height: 600px;" 
+                         style="height: 500px;" 
                          alt="Soldier Clip">
                 </div>
             </div>
@@ -105,10 +142,9 @@
                 <div class="row ">
                     <div class="col-2"></div>
                     <div class="col-4">
-                        <h1 class="text-white fw-bold text-start"
-                        style="font-size: 100px;">MODERN TACTICAL ARMS</h1>
-                        <p class="text-white fs-2 text-start">Discover cutting-edge tactical firearms designed for precision, reliability, and performance in every mission.</p>
-                        <p class="text-white fs-1 text-start fw-bold"><mark>IN FIREPOWER WE TRUST.</mark></p>
+                        <h1 class="text-white fw-bold text-start display-1">MODERN TACTICAL ARMS</h1>
+                        <p class="text-white fs-4 text-start">Discover cutting-edge tactical firearms designed for precision, reliability, and performance in every mission.</p>
+                        <p class="text-white fs-4 text-start fw-bold"><mark>IN FIREPOWER WE TRUST.</mark></p>
                         <button type="button" 
                                 class="btn btn-outline-warning mt-5" 
                                 style="font-size: 25px; padding: 20px;">Check Weapon Case</button>
@@ -123,24 +159,23 @@
     <div class="container-fluid position-relative bg-black justify-content-center align-content-center">
         <!-- shade -->
         <div class="position-absolute top-0 start-0 w-100 h-100"
-             style="background: linear-gradient(to right, #ffc10750, #ffc10700); z-index: 1;">
+             style="background: linear-gradient(to right, #ffc10725, #ffc10700); z-index: 1;">
         </div>
 
         <!-- txt -->
         <div class="row position-absolute top-0 start-0 w-100 h-100 align-items-center text-white text-end"
              style="z-index: 2;">
             <div class="col-6">
-                <h1 class="fw-bold display-1">MAX FIREPOWER</h1>
-                <p class="fs-2">Explore our extensive collection of high-performance firearms, engineered to deliver unparalleled firepower and precision for every tactical need.</p>
+                <h1 class="fw-bold display-5">MAX FIREPOWER</h1>
+                <p class="fs-6">Explore our extensive collection of high-performance firearms, engineered to deliver unparalleled firepower and precision for every tactical need.</p>
             </div>
         </div>
 
         <!-- desc image-->
         <div class="row position-relative" >
-            <div class="col-6 bg-black"
-                 style="height: 600px;"></div>
+            <div class="col-6 bg-black"></div>
             <div class="col-6 bg-dark overflow-hidden position-relative"
-                 style="height: 700px;">
+                 style="height: 300px;">
                 
                 <!-- shade -->
                 <div class="position-absolute top-0 start-0 w-100 h-100" 
@@ -160,7 +195,7 @@
     <div class="container-fluid position-relative bg-black justify-content-center align-content-center">
         <!-- shade -->
         <div class="position-absolute top-0 start-0 w-100 h-100"
-             style="background: linear-gradient(to left, #ffc10750, #ffc10700); z-index: 1;">
+             style="background: linear-gradient(to left, #ffc10725, #ffc10700); z-index: 1;">
         </div>
 
         <!-- txt -->
@@ -168,15 +203,14 @@
              style="z-index: 2;">
             <div class="col-6"></div>
             <div class="col-6">
-                <h1 class="fw-bold display-1">MAX AMMO</h1>
-                <p class="fs-2">Discover our premium selection of ammunition, meticulously crafted to ensure optimal performance, reliability, and accuracy for all your shooting needs.</p>    
+                <h1 class="fw-bold display-5">MAX AMMO</h1>
+                <p class="fs-6">Discover our premium selection of ammunition, meticulously crafted to ensure optimal performance, reliability, and accuracy for all your shooting needs.</p>    
             </div>
         </div>
 
         <!-- desc image-->
-        <div class="row position-relative" >
-            <div class="col-6 bg-black overflow-hidden position-relative"
-                 style="height: 700px;">
+        <div class="row position-relative>
+            <div class="col-6 bg-black overflow-hidden position-relative"></div>
                  <!-- shade -->
                 <div class="position-absolute top-0 start-0 w-100 h-100" 
                      style="background: linear-gradient(to left, #000000FF, #00000050);">
@@ -186,9 +220,7 @@
                      class=" float-end w-100 h-100"
                      style="object-fit: cover;">
             </div>
-            <div class="col-6 bg-black"
-                 style="height: 600px;">
-            </div>
+            <div class="col-6 bg-black"></div>
         </div>
     </div>
 
@@ -198,7 +230,7 @@
     <div class="container-fluid position-relative bg-black justify-content-center align-content-center">
         <!-- shade -->
         <div class="position-absolute top-0 start-0 w-100 h-100"
-             style="background: linear-gradient(to right, #ffc10750, #ffc10700); z-index: 1;">
+             style="background: linear-gradient(to right, #ffc10725, #ffc10700); z-index: 1;">
         </div>
 
         <!-- txt -->
@@ -235,7 +267,7 @@
     <div class="container-fluid position-relative bg-black justify-content-center align-content-center">
         <!-- shade -->
         <div class="position-absolute top-0 start-0 w-100 h-100"
-             style="background: linear-gradient(to left, #ffc10750, #ffc10700); z-index: 1;">
+             style="background: linear-gradient(to left, #ffc10725, #ffc10700); z-index: 1;">
         </div>
 
         <!-- txt -->
@@ -268,6 +300,22 @@
     </div>
 
     <div class="bg-black" style="height: 100px;"></div>
+
+    <div class="container-fluid bg-black">
+        <div class="row py-5">
+            <div class="col-3"></div>
+            <div class="col-3 bg-warning p-1 rounded">
+                <input type="search" 
+                       class="form-control bg-dark text-white form-control-lg" 
+                       style="">
+            </div>
+            <div class="col-3"></div>
+            <div class="col-3"></div> 
+        </div>
+    </div>
+
+    <div class="container-fluid bg-dark text-center text-white fs-2 py-4">
+        <p>&copy; 2024 ZEK Gunshop. All rights reserved.</p>
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
